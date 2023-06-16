@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .island {
+    @apply w-[49%] bg-[#22272e] border border-[#444c56] py-3 px-2;
+  }
+  .island-text {
+    @apply text-center text-3xl font-semibold;
+  }
+}
