@@ -1,18 +1,20 @@
 import React from 'react'
 
+import me from '../data/personal'
+
 const Header = () => {
   return (
-    <header className="bg-[#2d333b] sticky top-0">
-      <nav className="flex gap-3 px-2 py-2">
-        <div className="flex gap-3">
+    <header className="bg-[#2d333b] shadow-xl shadow-[#2d333b] sticky top-0 h-full z-20">
+      <nav className="flex justify-between px-3 py-2">
+        <div className="flex gap-5">
           <img
-            src={require('../assets/images/1640249997536.jpg')}
+            src={me.avatar}
             alt="logo"
             className="w-14 h-14 rounded-full"
           ></img>
-          <h1 className="font-semibold text-5xl">Tiesen</h1>
+          <h1 className="font-semibold text-5xl my-auto">{me.nickname}</h1>
         </div>
-        <ul className="flex gap-3 font-medium text-2xl pt-2 absolute right-5">
+        <ul className="font-medium text-2xl flex gap-3 right-6 my-auto">
           <li>
             <a href="/">Home</a>
           </li>
