@@ -6,14 +6,14 @@ const Header = () => {
   return (
     <header className="bg-[#2d333b] shadow-xl shadow-[#2d333b] sticky top-0 h-full z-20">
       <nav className="flex justify-between px-3 py-2">
-        <div className="flex gap-5">
+        <a className="flex gap-5 hover:text-white" href="/">
           <img
-            src={me.avatar}
+            src={require('../assets/Jp_1.png')}
             alt="logo"
-            className="w-14 h-14 rounded-full"
+            className="w-14"
           ></img>
           <h1 className="font-semibold text-5xl my-auto">{me.nickname}</h1>
-        </div>
+        </a>
         <ul className="font-medium text-2xl flex gap-3 right-6 my-auto">
           <li>
             <a href="/">Home</a>
