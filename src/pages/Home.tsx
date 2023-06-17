@@ -13,6 +13,7 @@ const Home = () => {
     },
   })
   const posts: any[] = data?.repository?.discussions?.nodes
+
   return (
     <div className="container mr-auto ml-auto mb-10">
       <div>
@@ -68,7 +69,7 @@ const Home = () => {
                   <h2 className="text-3xl font-bold text-center mb-4">
                     {post.title}
                   </h2>
-                  <div className="island bg-[#242526] w-full">
+                  <div className="island bg-[#242526] w-full text-ellipsis overflow-x-auto whitespace-nowrap">
                     <p>{parse(post.bodyHTML)}</p>
                   </div>
                 </div>
