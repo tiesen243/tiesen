@@ -1,13 +1,13 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import "./css/App.css";
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import './css/App.css'
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from './components/Header'
+import Footer from './components/Footer'
 
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Projects from "./pages/Projects";
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import Projects from './pages/Projects'
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
       </Routes>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

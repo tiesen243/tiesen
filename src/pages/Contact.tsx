@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function Contact() {
   return (
@@ -10,7 +10,7 @@ function Contact() {
         <h3 className="island-text">Social</h3>
       </div>
     </div>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

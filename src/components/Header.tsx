@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Header = () => {
   return (
@@ -6,7 +6,7 @@ const Header = () => {
       <nav className="flex gap-3 px-2 py-2">
         <div className="flex gap-3">
           <img
-            src={require("../assets/images/1640249997536.jpg")}
+            src={require('../assets/images/1640249997536.jpg')}
             alt="logo"
             className="w-14 h-14 rounded-full"
           ></img>
@@ -25,7 +25,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
