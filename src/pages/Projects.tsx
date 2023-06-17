@@ -9,9 +9,9 @@ const Projects = () => {
       <img
         src={me.banner}
         alt="banner"
-        className="rounded-b-lg mb-4 shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto"
+        className="rounded-b-lg mb-5 shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto"
       ></img>
-      <hr className="border-none h-[1px] bg-gray-300"></hr>
+      <hr className="border-none h-[1px] bg-gray-300 mx-2"></hr>
 
       <ul className="mb-4 flex flex-col items-center lg:flex-row flex-wrap justify-between mx-2">
         {projects.map((project, idx) => (
