@@ -1,4 +1,4 @@
-import { Person } from '../types/person'
+import type { Person } from '../types/person'
 const me: Person = {
   name: 'Trần Tiến',
   DoB: '22/06/2004',

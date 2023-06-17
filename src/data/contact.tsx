@@ -1,4 +1,4 @@
-import { Contact } from '../types/contact'
+import type { Contact } from '../types/contact'
 
 const contact: Contact = {
   email: 'ttien56906@gmail.com',
