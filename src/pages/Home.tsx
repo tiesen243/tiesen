@@ -2,7 +2,7 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 import parse from 'html-react-parser'
 
-import GET_REPOSITORY from '../GraphQL/Query'
+import GET_REPOSITORY from '../graphql/Query'
 import me from '../data/personal'
 
 const Home = () => {

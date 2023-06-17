@@ -15,3 +15,5 @@
     @apply text-center text-3xl font-semibold;
   }
 }
+
+@import 'github-syntax-dark/lib/github-dark.css';
