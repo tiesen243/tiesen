@@ -1,4 +1,5 @@
 import { Contact } from '../types/contact'
+
 const contact: Contact = {
   email: 'ttien56906@gmail.com',
   phone: '090 525 88 44',
