@@ -5,11 +5,11 @@ import me from '../data/personal'
 
 function Contact() {
   return (
-    <div className="container mr-auto ml-auto">
-      <img src={me.banner} alt="banner" className="mb-4 rounded-lg"></img>
+    <div className="container mr-auto ml-auto mb-10">
+      <img src={me.banner} alt="banner" className="mb-4 rounded-b-lg"></img>
       <hr className="mb-2 border-none h-[1px] bg-gray-300"></hr>
-      <div className="container flex flex-row col-2 py-2 gap-5 mr-auto ml-auto">
-        <div className="island">
+      <div className="flex flex-col lg:flex-row py-2 gap-5 lg:justify-between mx-2">
+        <div className="island w-full lg:w-[49%] text-2xl lg:text-xl">
           <h3 className="island-text pb-4">Contact</h3>
           <ul>
             <li>
@@ -21,7 +21,14 @@ function Contact() {
             </li>
             <li>
               <i className="fa-brands fa-linkedin pr-2"></i>
-              LinkedIn: <a href={contact.linkedin}>Trần Tiến</a>
+              LinkedIn:{' '}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={contact.linkedin}
+              >
+                Trần Tiến
+              </a>
             </li>
             <li>
               <i className="fa-brands fa-github pr-2"></i>
@@ -68,8 +75,8 @@ function Contact() {
             </li>
           </ul>
         </div>
-        <div className="island">
-          <h3 className="island-text">Social</h3>
+        <div className="island w-full lg:w-[49%]">
+          <h3 className="island-text">Comment</h3>
         </div>
       </div>
     </div>
