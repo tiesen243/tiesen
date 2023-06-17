@@ -5,7 +5,11 @@ import me from '../data/personal'
 const Projects = () => {
   return (
     <div className="container mr-auto ml-auto mb-10">
-      <img src={me.banner} alt="banner" className="rounded-b-lg mb-4"></img>
+      <img
+        src={me.banner}
+        alt="banner"
+        className="rounded-b-lg mb-4 shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto"
+      ></img>
       <hr className="border-none h-[1px] bg-gray-300"></hr>
 
       <ul className="mb-4 flex flex-col items-center lg:flex-row flex-wrap justify-between mx-2">

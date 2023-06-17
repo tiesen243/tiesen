@@ -1,4 +1,8 @@
 body {
   background-color: #1c2128;
+  background: linear-gradient(90deg, #1c2128 0%, #516074 100%);
   color: #fff;
+}
+a:hover {
+  color: #c86660;
 }

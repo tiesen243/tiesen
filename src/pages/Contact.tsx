@@ -6,7 +6,11 @@ import me from '../data/personal'
 function Contact() {
   return (
     <div className="container mr-auto ml-auto mb-10">
-      <img src={me.banner} alt="banner" className="mb-4 rounded-b-lg"></img>
+      <img
+        src={me.banner}
+        alt="banner"
+        className="mb-4 rounded-b-lg shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto"
+      ></img>
       <hr className="mb-2 border-none h-[1px] bg-gray-300"></hr>
       <div className="flex flex-col lg:flex-row py-2 gap-5 lg:justify-between mx-2">
         <div className="island w-full lg:w-[49%] text-2xl lg:text-xl">

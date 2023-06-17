@@ -6,11 +6,15 @@ const Home = () => {
   return (
     <div className="container mr-auto ml-auto mb-10">
       <div>
-        <img src={me.banner} alt="banner" className="rounded-b-lg"></img>
+        <img
+          src={me.banner}
+          alt="banner"
+          className="rounded-b-lg shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto"
+        ></img>
         <img
           src={me.avatar}
           alt="avt"
-          className="w-24 h-24 rounded-full shadow-black relative -top-10 left-5 border border-black"
+          className="w-24 h-24 rounded-full shadow-lg shadow-black relative -top-10 left-5 border border-black"
         ></img>
         <h2 className="text-3xl font-bold relative -top-20 left-32 w-fit">
           <i className="fa-solid fa-snowflake fa-spin"></i> {me.name}{' '}

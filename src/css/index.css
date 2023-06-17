@@ -9,7 +9,7 @@
 
 @layer components {
   .island {
-    @apply w-[49%] bg-[#22272e] border border-[#444c56] py-3 px-2 rounded-lg;
+    @apply w-[49%] bg-[#22272e] border border-[#444c56] py-3 px-2 rounded-lg shadow-[#22272e] shadow-xl;
   }
   .island-text {
     @apply text-center text-3xl font-semibold;
