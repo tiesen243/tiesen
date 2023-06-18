@@ -3,7 +3,7 @@ import React from 'react'
 import projects from '../data/project'
 import me from '../data/personal'
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
     <div className="container mr-auto ml-auto mb-10">
       <img

@@ -1,19 +1,10 @@
 import React from 'react'
-import { useQuery } from '@apollo/client'
-import parse from 'html-react-parser'
 
-import GET_REPOSITORY from '../graphql/Query'
+import Posts from '../components/PostReview'
+
 import me from '../data/personal'
 
-const Home = () => {
-  const { loading, error, data } = useQuery(GET_REPOSITORY, {
-    variables: {
-      username: 'tiesen243',
-      repository: 'tiesen',
-    },
-  })
-  const posts: any[] = data?.repository?.discussions?.nodes
-
+const Home: React.FC = () => {
   return (
     <div className="container mr-auto ml-auto mb-10">
       <div>
@@ -50,31 +41,7 @@ const Home = () => {
         <div className="island w-full lg:w-3/5 mb-6">
           <h2 className="island-text mb-4">My post</h2>
           <div className="flex flex-col gap-5">
-            {posts?.map((post: any, index: number): any => {
-              return (
-                <div key={index} className="island w-full">
-                  <div className="flex flex-row">
-                    <img
-                      src={post.author.avatarUrl}
-                      alt="Author avatar"
-                      className="w-16 rounded-full shadow-lg shadow-black"
-                    ></img>
-                    <div className="flex flex-col pl-4">
-                      <h3 className="capitalize text-2xl font-bold">
-                        {post.author.login}
-                      </h3>
-                      <p>{post.createdAt}</p>
-                    </div>
-                  </div>
-                  <h2 className="text-3xl font-bold text-center mb-4">
-                    {post.title}
-                  </h2>
-                  <div className="island bg-[#242526] w-full text-ellipsis overflow-x-auto whitespace-nowrap">
-                    <p>{parse(post.bodyHTML)}</p>
-                  </div>
-                </div>
-              )
-            })}
+            <Posts />
           </div>
         </div>
       </div>

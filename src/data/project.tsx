@@ -41,6 +41,5 @@ const projects: Project[] = [
     deployedUrl: 'https://tiesen243.github.io/TodoList/',
   },
 ]
-projects.forEach((item, index: number) => (item.id = index))
 
 export default projects

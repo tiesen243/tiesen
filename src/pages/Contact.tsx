@@ -3,7 +3,7 @@ import React from 'react'
 import contact from '../data/contact'
 import me from '../data/personal'
 
-function Contact() {
+const Contact: React.FC = () => {
   return (
     <div className="container mr-auto ml-auto mb-10">
       <img

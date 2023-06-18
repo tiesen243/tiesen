@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
+import PostDetail from './pages/PostDetail'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/post/:id" element={<PostDetail />} />
       </Routes>
       <Footer />
     </div>
