@@ -5,13 +5,18 @@ import GetPost from '../graphql/getPosts'
 
 const PostDetail: React.FC = () => {
   React.useEffect(() => {
-    window.onbeforeunload = null
+    window.onbeforeunload = (e) => {
+      e.preventDefault()
+    }
   })
+
   let post = GetPost(),
     { id } = useParams(),
     detail
   if (id) detail = post[+id]
+
   const { discussionUrl, title, html, createdAt, author } = detail
+
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'short',

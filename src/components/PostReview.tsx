@@ -11,19 +11,17 @@ const Posts: React.FC = () => {
       {posts?.map((post: Post) => {
         const { idx, url, discussionUrl, title, bodyText, createdAt, author } =
           post
+
         let previewText: string = bodyText
         if (bodyText.length >= 100)
           previewText = bodyText.substring(0, 69) + '...'
-        const options: Intl.DateTimeFormatOptions = {
+
+        const createdDate: Date = new Date(createdAt)
+        const createdDateFormat = createdDate.toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
-        }
-        const createdDate: Date = new Date(createdAt)
-        const createdDateFormat = createdDate.toLocaleDateString(
-          'en-US',
-          options
-        )
+        })
 
         return (
           <div key={idx} className="island w-full">
