@@ -3,7 +3,13 @@ import { useParams, Link } from 'react-router-dom'
 import parse from 'html-react-parser'
 import GetPost from '../graphql/getPosts'
 
-const PostDetail: React.FC = (props: any) => {
+const PostDetail: React.FC = () => {
+  React.useEffect(() => {
+    window.onbeforeunload = (e: any) => {
+      e.preventDefault()
+      return false
+    }
+  })
   let post = GetPost(),
     { id } = useParams(),
     detail
@@ -30,7 +36,7 @@ const PostDetail: React.FC = (props: any) => {
           <p>{createdDateFormat}</p>
         </div>
       </div>
-      <h1 className="text-5xl font-bold text-center pt-2">{title}</h1>
+      <h1 className="text-5xl font-bold text-center pt-2 abcd">{title}</h1>
       <div className="island w-11/12 mx-auto mt-4 mb-4 bg-[#242526] break-words">
         {parse(html)}
       </div>
