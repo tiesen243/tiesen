@@ -5,10 +5,7 @@ import GetPost from '../graphql/getPosts'
 
 const PostDetail: React.FC = () => {
   React.useEffect(() => {
-    window.onbeforeunload = (e: any) => {
-      e.preventDefault()
-      return false
-    }
+    window.onbeforeunload = null
   })
   let post = GetPost(),
     { id } = useParams(),
