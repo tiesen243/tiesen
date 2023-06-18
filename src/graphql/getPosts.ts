@@ -26,6 +26,12 @@ const GetPosts: any = () => {
     const url = `/post/${idx}`
     const authorName = author.login
     const authorAvatar = author.avatarUrl
+    const createdAtDate = new Date(createdAt)
+    const createdAtDateFormat = createdAtDate.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    })
     const post = {
       idx,
       url,
@@ -33,7 +39,7 @@ const GetPosts: any = () => {
       title,
       html,
       bodyText,
-      createdAt,
+      createdAt: createdAtDateFormat,
       author: { name: authorName, avatar: authorAvatar },
     }
     return post

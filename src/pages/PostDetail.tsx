@@ -17,14 +17,6 @@ const PostDetail: React.FC = () => {
 
   const { discussionUrl, title, html, createdAt, author } = detail
 
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  }
-  const createdDate: Date = new Date(createdAt)
-  const createdDateFormat = createdDate.toLocaleDateString('en-US', options)
-
   return (
     <div className="container m-auto island mt-10 w-[90%] lg:w-3/5 h-fit mb-16">
       <div className="flex flex-row pt-4 pl-4">
@@ -35,7 +27,7 @@ const PostDetail: React.FC = () => {
         ></img>
         <div className="flex flex-col pl-4">
           <h3 className="capitalize text-2xl font-bold">{author.name}</h3>
-          <p>{createdDateFormat}</p>
+          <p>{createdAt}</p>
         </div>
       </div>
       <h1 className="text-5xl font-bold text-center pt-2 abcd">{title}</h1>

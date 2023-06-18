@@ -6,6 +6,7 @@ import type { Post } from '../types/Post'
 
 const Posts: React.FC = () => {
   const posts = GetPosts()
+
   return (
     <>
       {posts?.map((post: Post) => {
@@ -15,13 +16,6 @@ const Posts: React.FC = () => {
         let previewText: string = bodyText
         if (bodyText.length >= 100)
           previewText = bodyText.substring(0, 69) + '...'
-
-        const createdDate: Date = new Date(createdAt)
-        const createdDateFormat = createdDate.toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        })
 
         return (
           <div key={idx} className="island w-full">
@@ -33,7 +27,7 @@ const Posts: React.FC = () => {
               ></img>
               <div className="flex flex-col pl-4">
                 <h3 className="capitalize text-2xl font-bold">{author.name}</h3>
-                <p>{createdDateFormat}</p>
+                <p>{createdAt}</p>
               </div>
             </div>
             <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
