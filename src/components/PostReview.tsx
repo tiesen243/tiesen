@@ -13,7 +13,7 @@ const Posts: React.FC = () => {
           post
         let previewText: string = bodyText
         if (bodyText.length >= 100)
-          previewText = bodyText.substring(0, 90) + '...'
+          previewText = bodyText.substring(0, 69) + '...'
         const options: Intl.DateTimeFormatOptions = {
           year: 'numeric',
           month: 'short',
@@ -39,7 +39,7 @@ const Posts: React.FC = () => {
               </div>
             </div>
             <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
-            <div className="island bg-[#242526] w-11/12 mx-auto text-ellipsis overflow-x-auto whitespace-nowrap">
+            <div className="island bg-[#242526] w-11/12 mx-auto">
               {previewText}
             </div>
             <div className="flex justify-around">

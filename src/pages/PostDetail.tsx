@@ -34,7 +34,7 @@ const PostDetail: React.FC = () => {
         </div>
       </div>
       <h1 className="text-5xl font-bold text-center pt-2 abcd">{title}</h1>
-      <div className="island w-11/12 mx-auto mt-4 mb-4 bg-[#242526] break-words">
+      <div className="island w-11/12 mx-auto mt-4 mb-4 bg-[#242526] break-words text-ellipsis overflow-x-auto whitespace-nowrap">
         {parse(html)}
       </div>
       <div className="flex justify-around mb-4 -mt-4">
