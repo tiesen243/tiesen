@@ -8,6 +8,7 @@ const PostDetail: React.FC = () => {
     window.onbeforeunload = (e) => {
       e.preventDefault()
     }
+    window.onpopstate = null
   })
 
   let post = GetPost(),
@@ -31,7 +32,7 @@ const PostDetail: React.FC = () => {
         </div>
       </div>
       <h1 className="text-5xl font-bold text-center pt-2 abcd">{title}</h1>
-      <div className="island w-11/12 mx-auto mt-4 mb-4 bg-[#242526] break-words text-ellipsis overflow-x-auto whitespace-nowrap">
+      <div className="island w-full mx-auto mt-8 mb-4 bg-[#242526] break-words text-ellipsis overflow-x-auto whitespace-nowrap">
         {parse(html)}
       </div>
       <div className="flex justify-around mb-4 -mt-4">
@@ -39,11 +40,11 @@ const PostDetail: React.FC = () => {
           href={discussionUrl}
           target="_blank"
           rel="noreferrer"
-          className="btn btn-68 w-fit"
+          className="btn btn-68 w-fit rounded-2xl"
         >
           see source post
         </a>
-        <Link to="/" className="btn btn-68 w-fit ml-4">
+        <Link to="/" className="btn btn-68 w-fit ml-4 rounded-2xl">
           back to home
         </Link>
       </div>

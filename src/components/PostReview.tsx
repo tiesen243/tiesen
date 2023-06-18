@@ -31,7 +31,7 @@ const Posts: React.FC = () => {
               </div>
             </div>
             <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
-            <div className="island bg-[#242526] w-11/12 mx-auto">
+            <div className="island bg-[#242526] w-[97%] mx-auto">
               {previewText}
             </div>
             <div className="flex justify-around">
@@ -41,7 +41,7 @@ const Posts: React.FC = () => {
                 }}
                 state={{ post }}
                 relative="path"
-                className="btn btn-68 text-center"
+                className="btn btn-68 text-center rounded-2xl"
               >
                 See full post
               </Link>
@@ -49,7 +49,7 @@ const Posts: React.FC = () => {
                 href={discussionUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-68 text-center"
+                className="btn btn-68 text-center rounded-2xl"
               >
                 See source post
               </a>
