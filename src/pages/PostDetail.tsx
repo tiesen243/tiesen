@@ -1,17 +1,18 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import parse from 'html-react-parser'
+
 import GetPost from '../graphql/getPosts'
 
 const PostDetail: React.FC = () => {
   React.useEffect(() => {
     window.onbeforeunload = (e) => e.preventDefault()
-  })
+  }, [])
 
   let post = GetPost(),
     { id } = useParams(),
     detail
-  if (id) detail = post[+id]
+  if (id) detail = post[id as unknown as number]
 
   const { discussionUrl, title, html, createdAt, author } = detail
 
@@ -37,11 +38,11 @@ const PostDetail: React.FC = () => {
           href={discussionUrl}
           target="_blank"
           rel="noreferrer"
-          className="btn-68 w-fit rounded-2xl"
+          className="btn-68"
         >
           see source post
         </a>
-        <Link to="/" className="btn-68 w-fit rounded-2xl">
+        <Link to="/" className="btn-68">
           back to home
         </Link>
       </div>

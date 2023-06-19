@@ -3,8 +3,12 @@ body {
   background: linear-gradient(90deg, #1c2128 0%, #516074 100%);
   color: #fff;
 }
-a:hover {
-  color: #62565e;
+
+.active {
+  color: #fff;
+}
+.active:hover {
+  color: #fff;
 }
 
 /* Scroll bar */
@@ -39,6 +43,7 @@ a:hover {
 .btn-68:before {
   border: 0 solid;
   box-sizing: border-box;
+  border-radius: 0.5rem;
 }
 
 .btn-68 {

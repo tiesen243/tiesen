@@ -5,7 +5,6 @@ import contact from '../data/contact'
 const ContactInfo: React.FC = () => {
   return (
     <>
-      {' '}
       <h3 className="island-text pb-4">Contact</h3>
       <ul>
         <li>
@@ -18,34 +17,34 @@ const ContactInfo: React.FC = () => {
         <li>
           <i className="fa-brands fa-linkedin pr-2"></i>
           LinkedIn:{' '}
-          <a target="_blank" rel="noopener noreferrer" href={contact.linkedin}>
+          <a target="_blank" rel="noreferrer" href={contact.linkedin}>
             Trần Tiến
           </a>
         </li>
         <li>
           <i className="fa-brands fa-github pr-2"></i>
           Github:{' '}
-          <a target="_blank" rel="noopener noreferrer" href={contact.github}>
+          <a target="_blank" rel="noreferrer" href={contact.github}>
             Trần Tiến
           </a>
         </li>
         <li>
           <i className="fa-brands fa-facebook pr-2"></i>
           Facebook:{' '}
-          <a target="_blank" rel="noopener noreferrer" href={contact.facebook}>
+          <a target="_blank" rel="noreferrer" href={contact.facebook}>
             Trần Tiến
           </a>
         </li>
         <li>
           <i className="fa-brands fa-twitter pr-2"></i>
           Twitter:{' '}
-          <a target="_blank" rel="noopener noreferrer" href={contact.twitter}>
+          <a target="_blank" rel="noreferrer" href={contact.twitter}>
             Trần Tiến
           </a>
         </li>
         <li>
           <i className="fa-brands fa-youtube pr-2"></i>Youtube:{' '}
-          <a target="_blank" rel="noopener noreferrer" href={contact.youtube}>
+          <a target="_blank" rel="noreferrer" href={contact.youtube}>
             Tiesen
           </a>
         </li>

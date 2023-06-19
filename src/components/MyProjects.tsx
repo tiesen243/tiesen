@@ -22,18 +22,14 @@ const MyProjects: React.FC = () => {
           {project.features && <p>Features: {project.features.join(', ')}</p>}
           <p>
             Repo:{' '}
-            <a target="_blank" rel="noopener noreferrer" href={project.repoUrl}>
+            <a target="_blank" rel="noreferrer" href={project.repoUrl}>
               {project.repoUrl}
             </a>
           </p>
           {project.deployedUrl && (
             <p>
               Deploy:{' '}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={project.deployedUrl}
-              >
+              <a target="_blank" rel="noreferrer" href={project.deployedUrl}>
                 {project.deployedUrl}
               </a>
             </p>

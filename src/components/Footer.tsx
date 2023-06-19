@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <a
           href={contact.github}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
           className="island-text text-xl"
         >
           <i className="fa-regular fa-copyright"></i> tiesen243

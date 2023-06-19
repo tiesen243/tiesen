@@ -5,7 +5,11 @@ import GetPosts from '../graphql/getPosts'
 import type { Post } from '../types/Post'
 
 const PostReview: React.FC = () => {
-  const posts = GetPosts()
+  const [posts, setPosts] = React.useState<Post[]>([])
+  const RecievePosts: Post[] = GetPosts()
+  React.useEffect(() => {
+    setPosts(RecievePosts)
+  }, [RecievePosts])
 
   return (
     <>
@@ -38,14 +42,7 @@ const PostReview: React.FC = () => {
                 {previewText}
               </div>
               <div className="flex justify-around">
-                <Link
-                  to={{
-                    pathname: url,
-                  }}
-                  state={{ post }}
-                  relative="path"
-                  className="btn-68 text-center rounded-xl"
-                >
+                <Link to={url} className="btn-68">
                   See full post
                 </Link>
               </div>
