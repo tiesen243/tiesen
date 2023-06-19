@@ -9,7 +9,7 @@ const me: Person = {
   college: 'Industrial University of Ho Chi Minh City',
   favourite: ['Coding', 'Reading', 'Music', 'Game'],
   languages: ['Vietnamese', 'English'],
-  skills: ['python', 'javascript', 'typescript', 'C++'],
+  skills: ['Python', 'JavaScript', 'TypeScript', 'C++'],
 }
 
 export default me
