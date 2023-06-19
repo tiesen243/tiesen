@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
       ></img>
       <hr className="mb-2 border-none h-[1px] bg-gray-300 mx-2"></hr>
       <div className="flex flex-col lg:flex-row py-2 gap-5 lg:justify-between mx-2">
-        <div className="island w-full lg:w-[49%] text-2xl lg:text-xl">
+        <div className="island w-full h-fit p-4 lg:w-[49%] text-2xl lg:text-xl">
           <h3 className="island-text pb-4">Contact</h3>
           <ul>
             <li>
@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
         </div>
         <div className="island w-full lg:w-[49%]">
           <h3 className="island-text">Comment</h3>
-          <div className="flex justify-center bg-gray-50 rounded-lg shadow mx-auto my-4 p-2 w-11/12">
+          <div className="flex justify-center bg-gray-50 rounded-lg shadow mx-auto p-4 mt-4 w-full">
             <div
               className="fb-comments"
               data-href="https://tiesen.vercel.app/contact"
