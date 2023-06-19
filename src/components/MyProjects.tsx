@@ -1,20 +1,21 @@
 import React from 'react'
 
+import type { Project } from '../types/project'
 import projects from '../data/project'
 
 const MyProjects: React.FC = () => {
   return (
     <ul className="mb-4 flex flex-col items-center lg:flex-row flex-wrap justify-between mx-2">
-      {projects.map((project, idx) => (
+      {projects?.map((project: Project, idx: number) => (
         <li
-          key={project.id}
+          key={idx}
           className="island my-4 px-4 py-4 text-xl w-full lg:w-[49%] h-fit lg:h-64"
         >
           <h3 className="text-center text-2xl mb-4">
             Name: <b>{project.name}</b>
           </h3>
           <p>Description: {project.description}</p>
-          <p>Language: {project.language} </p>
+          {project.language && <p>Languages: {project.language.join(', ')} </p>}
           {project.framework && (
             <p>Framework: {project.framework.join(', ')} </p>
           )}
@@ -27,7 +28,7 @@ const MyProjects: React.FC = () => {
           </p>
           {project.deployedUrl && (
             <p>
-              Deployed:{' '}
+              Deploy:{' '}
               <a
                 target="_blank"
                 rel="noopener noreferrer"

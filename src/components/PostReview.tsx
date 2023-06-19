@@ -12,15 +12,7 @@ const PostReview: React.FC = () => {
       <h2 className="island-text mb-4">My post</h2>
       <div className="flex flex-col gap-5">
         {posts?.map((post: Post) => {
-          const {
-            idx,
-            url,
-            discussionUrl,
-            title,
-            bodyText,
-            createdAt,
-            author,
-          } = post
+          const { idx, url, title, bodyText, createdAt, author } = post
 
           let previewText: string = bodyText
           if (bodyText.length >= 100)

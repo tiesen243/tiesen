@@ -3,9 +3,8 @@ export interface Project {
   name: string
   description: string
   framework?: string[]
-  language?: string
+  language: string[]
   features?: string[]
   repoUrl: string
   deployedUrl?: string
-  imageUrl?: string
 }

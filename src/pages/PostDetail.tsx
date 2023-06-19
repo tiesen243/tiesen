@@ -5,10 +5,7 @@ import GetPost from '../graphql/getPosts'
 
 const PostDetail: React.FC = () => {
   React.useEffect(() => {
-    window.onbeforeunload = (e) => {
-      e.preventDefault()
-    }
-    window.onpopstate = null
+    window.onbeforeunload = (e) => e.preventDefault()
   })
 
   let post = GetPost(),
@@ -32,7 +29,7 @@ const PostDetail: React.FC = () => {
         </div>
       </div>
       <h1 className="text-5xl font-bold text-center pt-2 abcd">{title}</h1>
-      <div className="island w-full mx-auto mt-8 mb-4 bg-[#242526] break-words text-ellipsis overflow-x-auto whitespace-nowrap">
+      <div className="island w-full mx-auto mt-8 mb-4 bg-[#242526] break-words overflow-auto">
         {parse(html)}
       </div>
       <div className="flex justify-around mb-4 -mt-4">
