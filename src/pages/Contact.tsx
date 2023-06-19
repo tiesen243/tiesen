@@ -89,7 +89,6 @@ const Contact: React.FC = () => {
               data-mobile="auto_detect"
               data-colorscheme="dark"
               data-numposts="5"
-              data-lazy="true"
             ></div>
           </div>
         </div>
