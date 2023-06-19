@@ -14,6 +14,12 @@
   .island-text {
     @apply text-center text-3xl font-semibold;
   }
+  .header-banner {
+    @apply mb-5 rounded-b-lg shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto;
+  }
+  .hr-style {
+    @apply border-none h-[1px] bg-gray-300 mx-2;
+  }
 }
 
 @import 'github-syntax-dark/lib/github-dark.css';

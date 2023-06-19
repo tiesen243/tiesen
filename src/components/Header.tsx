@@ -1,8 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import me from '../data/personal'
-
 const Header: React.FC = () => {
   return (
     <header className="bg-[#2d333b] shadow-xl shadow-[#2d333b] sticky top-0 h-full z-20">
@@ -13,7 +11,7 @@ const Header: React.FC = () => {
             alt="logo"
             className="w-14"
           ></img>
-          <h1 className="font-semibold text-5xl my-auto">{me.nickname}</h1>
+          <h1 className="font-semibold text-5xl my-auto">Tiesen</h1>
         </NavLink>
         <ul className="font-medium text-2xl flex gap-3 right-6 my-auto">
           <li>
@@ -23,7 +21,7 @@ const Header: React.FC = () => {
             <NavLink to="/projects">Projects</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </nav>

@@ -40,11 +40,11 @@ const PostDetail: React.FC = () => {
           href={discussionUrl}
           target="_blank"
           rel="noreferrer"
-          className="btn btn-68 w-fit rounded-2xl"
+          className="btn-68 w-fit rounded-2xl"
         >
           see source post
         </a>
-        <Link to="/" className="btn btn-68 w-fit ml-4 rounded-2xl">
+        <Link to="/" className="btn-68 w-fit rounded-2xl">
           back to home
         </Link>
       </div>
