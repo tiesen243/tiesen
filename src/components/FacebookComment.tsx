@@ -1,26 +1,23 @@
 import React from 'react'
 
+declare const window: any
+
 const FacebookComment: React.FC = () => {
-  const refresh = () => window.location.reload()
+  React.useEffect(() => {
+    window.FB.XFBML.parse()
+  }, [])
 
   return (
     <>
       <h3 className="island-text">Comment</h3>
-      <div className="flex flex-col justify-center bg-gray-50 rounded-lg shadow mx-auto p-4 mt-4 w-full">
+      <div className="bg-gray-50 rounded-lg shadow-md shadow-white mx-auto my-3 w-[96%]">
         <div
           className="fb-comments"
           data-href="https://tiesen.vercel.app/contact"
-          data-width="600"
+          data-width="100%"
           data-mobile="auto_detect"
-          data-colorscheme="dark"
           data-numposts="5"
         ></div>
-        <button
-          onClick={refresh}
-          className="capitalize bg-[#3578e5] text-center text-sm font-bold w-fit p-2 mx-auto rounded-lg hover:bg-[#ebedf0] transition-colors ease-in-out duration-500"
-        >
-          refresh
-        </button>
       </div>
     </>
   )

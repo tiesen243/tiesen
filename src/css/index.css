@@ -15,10 +15,10 @@
     @apply text-center text-3xl font-semibold;
   }
   .header-banner {
-    @apply mb-5 rounded-b-lg shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto;
+    @apply mb-6 rounded-b-lg shadow-lg shadow-[#dbdbdb] w-[97%] mx-auto;
   }
   .hr-style {
-    @apply border-none h-[1px] bg-gray-300 mx-2;
+    @apply border-none h-[1px] bg-gray-300 mx-4;
   }
   a {
     @apply hover:text-[#62565e] transition-colors ease-in-out duration-300;

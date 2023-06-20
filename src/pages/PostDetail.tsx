@@ -1,37 +1,39 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 import parse from 'html-react-parser'
 
+import type { Post } from '../types/Post'
 import GetPost from '../graphql/getPosts'
 
 const PostDetail: React.FC = () => {
+  const location = useLocation()
+  const { idx } = location.state
+
+  const post: Post[] = GetPost()
+  const [detail, setDetail] = React.useState<Post>()
+
   React.useEffect(() => {
-    window.onbeforeunload = (e) => e.preventDefault()
-  }, [])
+    if (post) setDetail(post[idx])
+  }, [!post])
 
-  let post = GetPost(),
-    { id } = useParams(),
-    detail
-  if (id) detail = post[id as unknown as number]
-
-  const { discussionUrl, title, html, createdAt, author } = detail
+  const { createdAt, title, html, author, discussionUrl } = detail || {}
 
   return (
     <div className="container m-auto island mt-10 w-[90%] lg:w-3/5 h-fit mb-16">
       <div className="flex flex-row pt-4 pl-4">
         <img
-          src={author.avatar}
+          src={author?.avatar}
           alt="Author avatar"
           className="w-16 rounded-full shadow-lg shadow-black"
         ></img>
         <div className="flex flex-col pl-4">
-          <h3 className="capitalize text-2xl font-bold">{author.name}</h3>
+          <h3 className="capitalize text-2xl font-bold">{author?.name}</h3>
           <p>{createdAt}</p>
         </div>
       </div>
       <h1 className="text-5xl font-bold text-center pt-2 abcd">{title}</h1>
       <div className="island w-full mx-auto mt-8 mb-4 bg-[#242526] break-words overflow-auto">
-        {parse(html)}
+        {parse(html || '')}
       </div>
       <div className="flex justify-around mb-4 -mt-4">
         <a

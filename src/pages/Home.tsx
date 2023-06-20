@@ -7,7 +7,7 @@ import PostReview from '../components/PostReview'
 
 const Home: React.FC = () => {
   return (
-    <div className="container mr-auto ml-auto mb-10">
+    <div className="container mr-auto ml-auto mb-14">
       <Banner />
       <HeaderInfo />
 
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
         <div className="island w-full h-fit lg:w-2/5 sm:text-2xl lg:text-xl font-medium pl-4 pb-4">
           <MyInfo />
         </div>
-        <div className="island w-full lg:w-3/5 mb-6">
+        <div className="island w-full lg:w-3/5 mb-6  mt-4 lg:mt-0">
           <PostReview />
         </div>
       </div>

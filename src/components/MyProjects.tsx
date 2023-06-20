@@ -11,7 +11,7 @@ const MyProjects: React.FC = () => {
           key={idx}
           className="island my-4 px-4 py-4 text-xl w-full lg:w-[49%] h-fit lg:h-64"
         >
-          <h3 className="text-center text-2xl mb-4">
+          <h3 className="text-center font-medium text-2xl mb-4">
             Name: <b>{project.name}</b>
           </h3>
           <p>Description: {project.description}</p>

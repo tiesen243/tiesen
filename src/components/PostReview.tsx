@@ -9,7 +9,7 @@ const PostReview: React.FC = () => {
   const RecievePosts: Post[] = GetPosts()
   React.useEffect(() => {
     setPosts(RecievePosts)
-  }, [RecievePosts])
+  }, [!RecievePosts])
 
   return (
     <>
@@ -28,7 +28,7 @@ const PostReview: React.FC = () => {
                 <img
                   src={author.avatar}
                   alt="Author avatar"
-                  className="w-16 rounded-full shadow-lg shadow-black"
+                  className="w-14 rounded-full shadow-lg shadow-black"
                 ></img>
                 <div className="flex flex-col pl-4">
                   <h3 className="capitalize text-2xl font-bold">
@@ -42,7 +42,7 @@ const PostReview: React.FC = () => {
                 {previewText}
               </div>
               <div className="flex justify-around">
-                <Link to={url} className="btn-68">
+                <Link to={url} state={{ idx: idx }} className="btn-68">
                   See full post
                 </Link>
               </div>

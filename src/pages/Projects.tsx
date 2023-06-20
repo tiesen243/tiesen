@@ -5,7 +5,7 @@ import MyProjects from '../components/MyProjects'
 
 const Projects: React.FC = () => {
   return (
-    <div className="container mr-auto ml-auto mb-10">
+    <div className="container mr-auto ml-auto mb-14">
       <Banner />
       <hr className="hr-style"></hr>
       <MyProjects />
