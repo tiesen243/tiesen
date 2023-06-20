@@ -31,7 +31,7 @@ const PostDetail: React.FC = () => {
           <p>{createdAt}</p>
         </div>
       </div>
-      <h1 className="text-5xl font-bold text-center pt-2 abcd">{title}</h1>
+      <h1 className="text-5xl font-bold text-center pt-2">{title}</h1>
       <div className="island w-full mx-auto mt-8 mb-4 bg-[#242526] break-words overflow-auto">
         {parse(html || '')}
       </div>

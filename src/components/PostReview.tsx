@@ -37,7 +37,7 @@ const PostReview: React.FC = () => {
                   <p>{createdAt}</p>
                 </div>
               </div>
-              <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
+              <h2 className="island-text mb-4">{title}</h2>
               <div className="island bg-[#242526] w-[97%] mx-auto">
                 {previewText}
               </div>
