@@ -14,7 +14,7 @@ const PostDetail: React.FC = () => {
   const [detail, setDetail] = React.useState<Post>()
 
   React.useEffect(() => {
-    post.forEach((post) => {
+    post?.forEach((post) => {
       if (post.id === id) setDetail(post)
     })
   }, [!post])
