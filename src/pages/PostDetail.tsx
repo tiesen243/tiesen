@@ -5,15 +5,18 @@ import parse from 'html-react-parser'
 import type { Post } from '../types/Post'
 import GetPost from '../graphql/getPosts'
 
+import FacebookComment from '../components/FacebookComment'
+
 const PostDetail: React.FC = () => {
   const location = useLocation()
-  const { idx } = location.state
-
+  const { id } = location.state
   const post: Post[] = GetPost()
   const [detail, setDetail] = React.useState<Post>()
 
   React.useEffect(() => {
-    if (post) setDetail(post[idx])
+    post.forEach((post) => {
+      if (post.id === id) setDetail(post)
+    })
   }, [!post])
 
   const { createdAt, title, html, author, discussionUrl } = detail || {}
@@ -35,6 +38,7 @@ const PostDetail: React.FC = () => {
       <div className="island w-full mx-auto mt-8 mb-4 bg-[#242526] break-words overflow-auto">
         {parse(html || '')}
       </div>
+      <FacebookComment path={id} />
       <div className="flex justify-around mb-4 -mt-4">
         <a
           href={discussionUrl}

@@ -5,6 +5,7 @@ const GET_REPOSITORY = gql`
     repository(name: $repository, owner: $username) {
       discussions(first: 10, categoryId: "DIC_kwDOJwd-Pc4CXR1U") {
         nodes {
+          number
           title
           createdAt
           bodyHTML

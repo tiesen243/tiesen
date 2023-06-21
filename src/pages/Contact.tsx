@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
           <ContactInfo />
         </div>
         <div className="island w-full lg:w-[49%] mt-4 lg:mt-0">
-          <FacebookComment />
+          <FacebookComment path="contact" />
         </div>
       </div>
     </div>

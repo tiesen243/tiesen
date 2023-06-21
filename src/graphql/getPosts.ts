@@ -13,8 +13,9 @@ const GetPosts: any = () => {
     },
   })
   const discussions = data?.repository?.discussions?.nodes
-  const posts = discussions?.map((discussion: any, idx: number): Post => {
+  const posts = discussions?.map((discussion: any): Post => {
     const {
+      number: id,
       title,
       createdAt,
       bodyHTML: html,
@@ -23,7 +24,7 @@ const GetPosts: any = () => {
       author,
     } = discussion
 
-    const url = `/post/${idx}`
+    const url = `/post/${id}`
     const authorName = author.login
     const authorAvatar = author.avatarUrl
     const createdAtDate = new Date(createdAt)
@@ -32,8 +33,9 @@ const GetPosts: any = () => {
       month: 'short',
       day: 'numeric',
     })
-    const post = {
-      idx,
+
+    const post: Post = {
+      id,
       url,
       discussionUrl,
       title,
