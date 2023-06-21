@@ -14,7 +14,7 @@ const PostReview: React.FC = () => {
 
   return (
     <>
-      <h2 className="island-text mb-4">My post</h2>
+      <h2 className="island-text mb-4 select-none">My post</h2>
       <div className="flex flex-col gap-5">
         {posts?.map((post: Post) => {
           const { id, url, title, bodyText, createdAt, author } = post
@@ -29,16 +29,16 @@ const PostReview: React.FC = () => {
                 <img
                   src={author.avatar}
                   alt="Author avatar"
-                  className="w-14 rounded-full shadow-lg shadow-black"
+                  className="w-14 h-14 rounded-full shadow-lg shadow-black"
                 ></img>
-                <div className="flex flex-col pl-4">
+                <div className="flex flex-col pl-4 select-none justify-center">
                   <h3 className="capitalize text-2xl font-bold">
                     {author.name}
                   </h3>
                   <p>{createdAt}</p>
                 </div>
               </div>
-              <h2 className="island-text mb-4">{title}</h2>
+              <h2 className="island-text mt-4 mb-4">{title}</h2>
               <div className="island bg-[#242526] w-[97%] mx-auto">
                 {previewText}
               </div>

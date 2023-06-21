@@ -11,7 +11,7 @@ const projects: Project[] = [
     deployedUrl: 'https://tiesen.vercel.app/',
   },
   {
-    name: 'nvim',
+    name: 'Nvim Config',
     description: 'My neovim config',
     language: ['Lua'],
     features: ['LSP', 'Treesitter', 'Telescope', 'NvimTree', 'GitSigns'],
@@ -33,7 +33,7 @@ const projects: Project[] = [
     deployedUrl: 'https://tiesen243.github.io/ChatBot/',
   },
   {
-    name: 'todo',
+    name: 'TodoList',
     description: 'A todo app',
     language: ['JavaScript', 'CSS'],
     features: ['Todo', 'Localstorage'],

@@ -16,6 +16,7 @@ const GetPosts: any = () => {
   const posts = discussions?.map((discussion: any): Post => {
     const {
       number: id,
+      id: disscussionId,
       title,
       createdAt,
       bodyHTML: html,
@@ -24,7 +25,7 @@ const GetPosts: any = () => {
       author,
     } = discussion
 
-    const url = `/post/${id}`
+    const url = `/post/${disscussionId}`
     const authorName = author.login
     const authorAvatar = author.avatarUrl
     const createdAtDate = new Date(createdAt)

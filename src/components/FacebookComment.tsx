@@ -13,7 +13,7 @@ const FacebookComment: React.FC<Props> = (props: any) => {
 
   return (
     <>
-      <h3 className="island-text">Comment</h3>
+      <h3 className="island-text select-none">Comment</h3>
       <div className="bg-gray-50 rounded-lg shadow-md shadow-white mx-auto my-3 w-[96%]">
         <div
           className="fb-comments"

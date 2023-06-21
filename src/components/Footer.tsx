@@ -4,7 +4,7 @@ import contact from '../data/contact'
 const Footer: React.FC = () => {
   const date = new Date()
   return (
-    <footer className="w-full h-fit bg-[#2d333b] fixed bottom-0 left-0 z-20 shadow shadow-black">
+    <footer className="w-full h-fit bg-[#2d333b] fixed bottom-0 left-0 z-20 shadow shadow-black select-none">
       <div className="px-4 py-2 flex flex-row justify-between">
         <a
           href={contact.github}

@@ -12,7 +12,7 @@ const Home: React.FC = () => {
       <HeaderInfo />
 
       <div className="flex flex-col lg:flex-row gap-3 mx-2 -mt-6">
-        <div className="island w-full h-fit lg:w-2/5 sm:text-2xl lg:text-xl font-medium pl-4 pb-4">
+        <div className="island w-full h-fit lg:w-2/5 sm:text-2xl lg:text-xl font-medium pl-4 pb-4 select-none">
           <MyInfo />
         </div>
         <div className="island w-full lg:w-3/5 mb-6  mt-4 lg:mt-0">

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-[#2d333b] shadow-xl shadow-[#2d333b] sticky top-0 h-full z-20">
+    <header className="bg-[#2d333b] shadow-xl shadow-[#2d333b] sticky top-0 h-full z-20 select-none">
       <nav className="flex justify-between px-3 py-2">
         <div className="flex gap-5">
           <img

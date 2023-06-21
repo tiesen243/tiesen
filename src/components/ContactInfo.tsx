@@ -5,39 +5,34 @@ import contact from '../data/contact'
 const ContactInfo: React.FC = () => {
   return (
     <>
-      <h3 className="island-text pb-4">Contact</h3>
-      <ul>
+      <h3 className="island-text pb-4 select-none">Contact</h3>
+      <ul className=" flex flex-col gap-2">
         <li>
-          <i className="fa-solid fa-envelope pr-2"></i>
-          Email: {contact.email}
+          <i className="fa-solid fa-envelope pr-2"></i>Email: {contact.email}
         </li>
         <li>
-          <i className="fa-solid fa-phone pr-2"></i> Phone: {contact.phone}
+          <i className="fa-solid fa-phone pr-2"></i>Phone: {contact.phone}
         </li>
         <li>
-          <i className="fa-brands fa-linkedin pr-2"></i>
-          LinkedIn:{' '}
+          <i className="fa-brands fa-linkedin pr-2 text-3xl"></i>LinkedIn:{' '}
           <a target="_blank" rel="noreferrer" href={contact.linkedin}>
             Trần Tiến
           </a>
         </li>
         <li>
-          <i className="fa-brands fa-github pr-2"></i>
-          Github:{' '}
+          <i className="fa-brands fa-github pr-2"></i>Github:{' '}
           <a target="_blank" rel="noreferrer" href={contact.github}>
             Trần Tiến
           </a>
         </li>
         <li>
-          <i className="fa-brands fa-facebook pr-2"></i>
-          Facebook:{' '}
+          <i className="fa-brands fa-facebook pr-2"></i>Facebook:{' '}
           <a target="_blank" rel="noreferrer" href={contact.facebook}>
             Trần Tiến
           </a>
         </li>
         <li>
-          <i className="fa-brands fa-twitter pr-2"></i>
-          Twitter:{' '}
+          <i className="fa-brands fa-twitter pr-2"></i>Twitter:{' '}
           <a target="_blank" rel="noreferrer" href={contact.twitter}>
             Trần Tiến
           </a>

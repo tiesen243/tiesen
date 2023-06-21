@@ -11,6 +11,7 @@ import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import PostDetail from './pages/PostDetail'
+import NotFound from './pages/NotFound'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/post/:id" element={<PostDetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

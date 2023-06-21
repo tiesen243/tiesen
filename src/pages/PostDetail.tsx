@@ -27,19 +27,19 @@ const PostDetail: React.FC = () => {
         <img
           src={author?.avatar}
           alt="Author avatar"
-          className="w-16 rounded-full shadow-lg shadow-black"
+          className="w-16 h-16 rounded-full shadow-lg shadow-black"
         ></img>
-        <div className="flex flex-col pl-4">
+        <div className="flex flex-col pl-4 select-none justify-center gap-2">
           <h3 className="capitalize text-2xl font-bold">{author?.name}</h3>
           <p>{createdAt}</p>
         </div>
       </div>
-      <h1 className="text-5xl font-bold text-center pt-2">{title}</h1>
-      <div className="island w-full mx-auto mt-8 mb-4 bg-[#242526] break-words overflow-auto">
+      <h1 className="text-5xl font-bold text-center mt-8">{title}</h1>
+      <div className="island w-full mx-auto mt-8 mb-8 bg-[#242526] break-words overflow-auto">
         {parse(html || '')}
       </div>
       <FacebookComment path={id} />
-      <div className="flex justify-around mb-4 -mt-4">
+      <div className="flex justify-around mb-4">
         <a
           href={discussionUrl}
           target="_blank"
