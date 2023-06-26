@@ -10,6 +10,7 @@ const PostReview: React.FC = () => {
 
   React.useEffect(() => {
     setPosts(RecievePosts)
+    // eslint-disable-next-line
   }, [!RecievePosts])
 
   return (
@@ -43,7 +44,7 @@ const PostReview: React.FC = () => {
                 {previewText}
               </div>
               <div className="flex justify-around">
-                <Link to={url} state={{ id: id }} className="btn-68">
+                <Link to={url} className="btn-68">
                   See full post
                 </Link>
               </div>

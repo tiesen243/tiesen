@@ -7,6 +7,8 @@ type Props = {
 }
 
 const FacebookComment: React.FC<Props> = (props: any) => {
+  const { path } = props
+
   React.useEffect(() => {
     window.FB.XFBML.parse()
   }, [])
@@ -17,7 +19,7 @@ const FacebookComment: React.FC<Props> = (props: any) => {
       <div className="bg-gray-50 rounded-lg shadow-md shadow-white mx-auto my-3 w-[96%]">
         <div
           className="fb-comments"
-          data-href={'https://tiesen.vercel.app/' + props.path}
+          data-href={'https://tiesen.vercel.app/' + path}
           data-width="100%"
           data-mobile="auto_detect"
           data-numposts="5"

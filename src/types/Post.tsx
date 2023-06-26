@@ -1,5 +1,6 @@
 export interface Post {
   id: number
+  disscussionId: string
   title: string
   html: string
   bodyText: string

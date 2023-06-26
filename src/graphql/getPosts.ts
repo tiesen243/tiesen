@@ -37,6 +37,7 @@ const GetPosts: any = () => {
 
     const post: Post = {
       id,
+      disscussionId,
       url,
       discussionUrl,
       title,

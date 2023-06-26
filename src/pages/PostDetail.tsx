@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import parse from 'html-react-parser'
 
 import type { Post } from '../types/Post'
@@ -8,18 +8,19 @@ import GetPost from '../graphql/getPosts'
 import FacebookComment from '../components/FacebookComment'
 
 const PostDetail: React.FC = () => {
-  const location = useLocation()
-  const { id } = location.state
+  const { id } = useParams()
   const post: Post[] = GetPost()
   const [detail, setDetail] = React.useState<Post>()
 
   React.useEffect(() => {
     post?.forEach((post) => {
-      if (post.id === id) setDetail(post)
+      if (post.disscussionId === id) setDetail(post)
     })
+    // eslint-disable-next-line
   }, [!post])
 
-  const { createdAt, title, html, author, discussionUrl } = detail || {}
+  const { createdAt, title, html, author, discussionUrl, disscussionId } =
+    detail || {}
 
   return (
     <div className="container m-auto island mt-10 w-[90%] lg:w-3/5 h-fit mb-16">
@@ -38,7 +39,7 @@ const PostDetail: React.FC = () => {
       <div className="island w-full mx-auto mt-8 mb-8 bg-[#242526] break-words overflow-auto">
         {parse(html || '')}
       </div>
-      <FacebookComment path={id} />
+      <FacebookComment path={disscussionId as string} />
       <div className="flex justify-around mb-4">
         <a
           href={discussionUrl}
