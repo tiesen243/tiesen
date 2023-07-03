@@ -5,11 +5,11 @@ import projects from '../data/project'
 
 const MyProjects: React.FC = () => {
   return (
-    <ul className="mb-4 flex flex-col items-center lg:flex-row flex-wrap justify-between mx-2">
+    <ul className="mb-4 mx-2 flex flex-col items-center lg:flex-row flex-wrap justify-between">
       {projects?.map((project: Project, idx: number) => (
         <li
           key={idx}
-          className="island my-4 px-4 py-4 text-xl w-full lg:w-[49%] h-fit lg:h-64"
+          className="island my-4 p-4 text-xl w-full lg:w-[49%] h-fit lg:h-64"
         >
           <h3 className="text-center text-2xl mb-4 font-black">
             {project.name}

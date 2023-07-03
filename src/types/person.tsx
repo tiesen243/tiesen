@@ -1,5 +1,4 @@
 export interface Person {
-  avatar: string
   banner: string
   name: string
   nickname: string

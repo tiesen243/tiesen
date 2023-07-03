@@ -4,7 +4,7 @@ const projects: Project[] = [
   {
     name: 'Tiesen',
     description: 'My personal website',
-    framework: ['React', 'Tailwind CSS'],
+    framework: ['ReactJs', 'Tailwind CSS'],
     language: ['TypeScript'],
     features: ['Github Graphql', 'Responsive'],
     repoUrl: 'https://github.com/tiesen243/tiesen',
@@ -16,6 +16,21 @@ const projects: Project[] = [
     language: ['Lua'],
     features: ['LSP', 'Treesitter', 'Telescope', 'NvimTree', 'GitSigns'],
     repoUrl: 'https://github.com/tiesen243/nvim',
+  },
+  {
+    name: 'YKNAnime',
+    description: 'Anime website',
+    framework: ['Next.js', 'Tailwind CSS'],
+    language: ['TypeScript'],
+    features: [
+      'Responsive',
+      'Dark Mode',
+      'Consumet API',
+      'Search',
+      'Save Anime',
+    ],
+    repoUrl: 'https://github.com/tiesen243/yknanime',
+    deployedUrl: 'https://yknanime.vercel.app/',
   },
   {
     name: 'DuckGPT',

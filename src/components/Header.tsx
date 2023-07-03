@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom'
 const Header: React.FC = () => {
   return (
     <header className="bg-[#2d333b] shadow-xl shadow-[#2d333b] sticky top-0 h-full z-20 select-none">
-      <nav className="flex justify-between px-3 py-2">
+      <nav className="flex justify-between px-4 py-2">
         <div className="flex gap-5">
           <img
-            src={require('../assets/Jp_1.png')}
+            src={require('../assets/logo.png')}
             alt="logo"
-            className="w-14"
+            className="w-14 h-14"
           ></img>
           <h1 className="font-semibold text-5xl my-auto">Tiesen</h1>
         </div>

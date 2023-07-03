@@ -4,21 +4,16 @@ import me from '../data/personal'
 
 const HeaderInfo: React.FC = () => {
   return (
-    <>
-      <img
-        src={me.avatar}
-        alt="avt"
-        className="w-24 h-24 rounded-full shadow-lg shadow-black relative -top-16 left-10 border border-black"
-      ></img>
-      <h2 className="text-3xl font-bold relative -top-24 left-36 w-fit select-none">
+    <section className="flex flex-col justify-center items-center gap-4 mb-4">
+      <h2 className="text-3xl font-bold select-none">
         <i className="fa-solid fa-snowflake fa-spin"></i> {me.name}{' '}
         <i className="fa-solid fa-snowflake fa-spin fa-spin-reverse"></i>
       </h2>
-      <p className="island-text text-center -top-14 relative select-none">
+      <p className="island-text select-none">
         Trần trụi với thiên nhiên<br></br>
         Hồn nhiên như cây cỏ
       </p>
-    </>
+    </section>
   )
 }
 

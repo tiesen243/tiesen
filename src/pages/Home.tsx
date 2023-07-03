@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       <Banner />
       <HeaderInfo />
 
-      <div className="flex flex-col lg:flex-row gap-3 mx-2 -mt-6">
+      <div className="flex flex-col lg:flex-row gap-3 mx-2">
         <div className="island w-full h-fit lg:w-2/5 sm:text-2xl lg:text-xl font-medium pl-4 pb-4 select-none">
           <MyInfo />
         </div>
