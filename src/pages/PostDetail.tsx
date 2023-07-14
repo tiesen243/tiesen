@@ -23,7 +23,7 @@ const PostDetail: React.FC = () => {
     detail || {}
 
   return (
-    <div className="container m-auto island mt-10 w-[90%] lg:w-3/5 h-fit mb-16">
+    <div className="island w-[90%] lg:w-3/5 h-fit mx-auto my-10">
       <div className="flex flex-row pt-4 pl-4">
         <img
           src={author?.avatar}

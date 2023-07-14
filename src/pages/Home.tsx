@@ -7,7 +7,7 @@ import PostReview from '../components/PostReview'
 
 const Home: React.FC = () => {
   return (
-    <div className="container mr-auto ml-auto mb-14">
+    <>
       <Banner />
       <HeaderInfo />
 
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           <PostReview />
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

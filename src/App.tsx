@@ -10,16 +10,18 @@ import Projects from './pages/Projects'
 
 const App = () => {
   return (
-    <div className="App">
+    <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/post/:id" element={<PostDetail />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+      <main className="container mx-auto mb-10 select-none">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/post/:id" element={<PostDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+    </>
   )
 }
 

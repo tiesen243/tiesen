@@ -33,6 +33,19 @@
 
 @import 'github-syntax-dark/lib/github-dark.css';
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
 .active {
   color: #fff;
 }

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { ApolloProvider } from '@apollo/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import './css/index.css'
+import './index.css'
 import App from './App'
 import { client } from './graphql/client'
 import reportWebVitals from './reportWebVitals'
