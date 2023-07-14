@@ -1,13 +1,8 @@
 import React from 'react'
+import { cover } from '../data/images'
 
 const Banner: React.FC = () => {
-  return (
-    <img
-      src={require('../assets/bg_4x.png')}
-      alt="banner"
-      className="header-banner"
-    ></img>
-  )
+  return <img src={cover} alt="banner" className="header-banner" />
 }
 
 export default Banner

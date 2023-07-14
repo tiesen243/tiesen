@@ -1,17 +1,12 @@
-import React from 'react'
-
-import { Routes, Route } from 'react-router-dom'
-
-import './css/App.css'
+import { Route, Routes } from 'react-router-dom'
 
 import Header from './components/Header'
-import Footer from './components/Footer'
 
-import Home from './pages/Home'
 import Contact from './pages/Contact'
-import Projects from './pages/Projects'
-import PostDetail from './pages/PostDetail'
+import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import PostDetail from './pages/PostDetail'
+import Projects from './pages/Projects'
 
 const App = () => {
   return (
@@ -24,7 +19,6 @@ const App = () => {
         <Route path="/post/:id" element={<PostDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </div>
   )
 }
